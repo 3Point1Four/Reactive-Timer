@@ -41,9 +41,8 @@ display: inline-block;
 }
 
 .dropdown {
+	background: transparent;
 	appearance: none;
-	-webkit-appearance: none;
-	-moz-appearance: none;
 	background: transparent;
 	border: none;
 	padding: 20px;
@@ -60,13 +59,13 @@ display: inline-block;
 	margin-bottom: 8px;
 	font-size: 16px;
 	font-weight: 500;
-	color: #333;
+	color: #ffffff;
 	font-family: var(--ui-font);
 }
 
 .dropdown select {
-	background-color: #ffffff;
-	border: 1px solid #ccc;
+	background: transparent;
+	border: 1px solid #4d4d4d;
 	border-radius: 4px;
 	padding: 10px;
 	width: 80%;
@@ -102,7 +101,7 @@ display: inline-block;
 	padding: 6px;
 	border-radius: 24px;
 	text-align: center;
-	color: #000000;
+	color: #ffffff;
 	cursor: pointer;
 	position: relative;
 	font-size: var(--ui-size);
@@ -189,6 +188,7 @@ display: inline-block;
 	box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);;
 	display: none;
 	position: absolute;
+	color: #FFF;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -282,17 +282,15 @@ body::-webkit-scrollbar-thumb:hover {
 
 .input-container {
 	border-radius: 6px;
-	outline:#757575 none 2px;
+	border:#333 solid 1px;
 	position: relative;
 	width: 80%;
 	margin: 20px;
 	appearance: none;
 	background: transparent;
-	border: none;
 	padding: 20px;
 	font-size: inherit;
 	cursor: pointer;
-	outline: none;
 	font-family: var(--ui-font);
 }
 
@@ -300,7 +298,7 @@ body::-webkit-scrollbar-thumb:hover {
 	position: absolute;
 	bottom: 10px;
 	left: 0;
-	color: #888;
+	color: #ffffff;
 	/* Label color */
 	transform-origin: left bottom;
 	transform: scale(1);
