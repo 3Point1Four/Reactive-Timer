@@ -45,16 +45,17 @@ document.addEventListener("drop", (e) => {
   e.preventDefault();
   if (e.target.classList.contains("draggable")) {
     e.target.classList.remove("drag-over");
-  }
 
-  if (e.target !== dragged && e.target.classList.contains("draggable")) {
-    const parent = e.target.parentNode;
-    const target = e.target;
-    const draggedClone = dragged.cloneNode(true);
+    // Check if the dragged element is not the first div (logo)
+    if (dragged !== document.querySelector(".grid > .draggable img")) {
+      const parent = e.target.parentNode;
+      const target = e.target;
+      const draggedClone = dragged.cloneNode(true);
 
-    parent.replaceChild(draggedClone, target);
-    parent.replaceChild(target, dragged);
-    dragged = draggedClone;
+      parent.replaceChild(draggedClone, target);
+      parent.replaceChild(target, dragged);
+      dragged = draggedClone;
+    }
   }
 });
 
