@@ -94,6 +94,7 @@ display: inline-block;
 	grid-template-columns: repeat(5, auto);
 	gap: var(--grid-size);
 	height: 100%;
+	align-content: end;
 }
 
 .draggable {
@@ -110,6 +111,7 @@ display: inline-block;
 	font-size: var(--ui-size);
 	font-family: var(--timer-font);
 	background: rgba(0, 0, 0, 0.2);
+	min-height: 280px;
 	backdrop-filter: blur(16px);
 	z-index: 10;
 	border: 2px solid rgba(255, 255, 255, 0.1);
@@ -318,12 +320,28 @@ body::-webkit-scrollbar-thumb:hover {
 		box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
 }
 
-#finalTimesList {
+#list-module {
+	display: flex;
+	flex-direction: column;
+}
+
+#finalTimes {
 	max-height: 200px;
 	overflow-y: auto;
+	font-size: 16px;
+	padding: 4px;
+	display: flex;
+	justify-content: left;
 }
 
 #finalTimesList li {
 	font-size: 16px;
-	margin-bottom: 8px;
+	margin: 8px;
+}
+
+#list-top {
+	position: sticky;
+	top: 0;
+	display: flex;
+	justify-content: center;
 }
