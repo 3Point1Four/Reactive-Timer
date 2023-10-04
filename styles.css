@@ -1,0 +1,330 @@
+/* Define CSS variables for fonts */
+:root {
+	--timer-font: 'Product Sans',
+		sans-serif;
+	--ui-font: 'Product Sans',
+		sans-serif;
+	--settings-font: 'Product Sans',
+		sans-serif;
+	--grid-size: 10px;
+	--timer-size: 20px;
+	--ui-size: 20px;
+}
+
+body,
+html {
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+	font-size: 16px;
+	background: url('https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg?auto=compress&cs=tinysrgb&w=1600');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.label{
+display: inline-block;
+	padding: 12px 24px;
+	background-color: #1976D2;
+	color: #FFFFFF;
+	font-size: 16px;
+	font-weight: 500;
+	border: 10px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s, box-shadow 0.3s;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	font-family: var(--settings-font);
+}
+
+.dropdown {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background: transparent;
+	border: none;
+	padding: 20px;
+	font-family: inherit;
+	font-size: inherit;
+	cursor: pointer;
+	outline: none;
+	font-family: var(--ui-font);
+}
+
+.dropdown label {
+	display: block;
+	padding: 20px;
+	margin-bottom: 8px;
+	font-size: 16px;
+	font-weight: 500;
+	color: #333;
+	font-family: var(--ui-font);
+}
+
+.dropdown select {
+	background-color: #ffffff;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 10px;
+	width: 80%;
+	font-family: var(--ui-font);
+}
+
+.dropdown select:hover,
+.dropdown select:focus {
+	border-color: #1976D2;
+	box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+/* Add some margin or padding to create space between the button and select */
+.dropdown button {
+	margin: 10px;
+	flex: 1;
+	/* Adjust the margin as needed */
+}
+
+.grid {
+	display: grid;
+	grid-template-rows: repeat(3, auto);
+	grid-template-columns: repeat(5, auto);
+	gap: var(--grid-size);
+	height: 100%;
+}
+
+.draggable {
+	background-color: #eeeeee;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 6px;
+	border-radius: 24px;
+	text-align: center;
+	color: #000000;
+	cursor: pointer;
+	position: relative;
+	font-size: var(--ui-size);
+	font-family: var(--timer-font);
+	background: rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(16px);
+	z-index: 10;
+	border: 2px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
+}
+
+.drag-over {
+	border: 2px dashed #3498db;
+	border-radius: 60px;
+	padding: 4px;
+	cursor: grab;
+}
+
+.button {
+	display: inline-block;
+	padding: 12px 24px;
+	background-color: #1976D2;
+	color: #FFFFFF;
+	font-size: 16px;
+	font-weight: 500;
+	border: 10px;
+	border-radius: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s, box-shadow 0.3s;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+}
+
+.button#showSettings svg{
+	transition: transform 0.3s ease-in-out;
+}
+
+.button#showSettings:hover svg{
+	animation: spin 0.3s linear 1 forwards;
+}
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(180deg);
+	}
+}
+.button#showSettings:not(:hover) svg{
+	animation: spin-back 0.3s linear 1 forwards;
+}
+@keyframes spin-back {
+	0% {
+		transform: rotate(180deg);
+	}
+
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+.button:hover {
+	background-color: #1565C0;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+	background-color: #0D47A1;
+	box-shadow: none;
+}
+
+.button:disabled {
+	background-color: #BDBDBD;
+	color: #757575;
+	cursor: not-allowed;
+}
+
+#settingsPanel {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 16px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	text-align: center;
+	resize: both;
+	overflow: auto;
+	min-width: 400px;
+	min-height: 300px;
+	max-width: 600px;
+	max-height: 900px;
+	font-family: var(--settings-font);
+}
+
+.settings-content {
+	resize: both;
+	overflow: auto;
+}
+
+/* Define the scrollbar styles */
+/* Track */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #3498db;
+	border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #2980b9;
+}
+
+.stopwatch {
+	font-family: var(--ui-font);
+}
+
+#stopwatch {
+	background-color: #ffffff;
+	display: flex;
+	cursor: pointer;
+	text-align: center;
+	color: #000000;
+	min-width: 300px;
+}
+
+#stopwatch-child {
+	font-size: var(--timer-size);
+	min-width: 100px;
+	text-align: center;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+}
+
+#stopwatch.active {
+	background-color: #00FF00;
+}
+
+#stopwatch.dormant {
+	background-color: #ffffff00
+}
+
+/* Apply scrollbar styles to the body */
+body {
+	scrollbar-width: thin;
+	scrollbar-color: #3498db #ffffff;
+}
+
+/* Track for Firefox */
+body::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Handle for Firefox */
+body::-webkit-scrollbar-thumb {
+	background: #3498db;
+	border-radius: 5px;
+}
+
+/* Handle on hover for Firefox */
+body::-webkit-scrollbar-thumb:hover {
+	background: #2980b9;
+}
+
+.input-container {
+	border-radius: 6px;
+	outline:#757575 none 2px;
+	position: relative;
+	width: 80%;
+	margin: 20px;
+	appearance: none;
+	background: transparent;
+	border: none;
+	padding: 20px;
+	font-size: inherit;
+	cursor: pointer;
+	outline: none;
+	font-family: var(--ui-font);
+}
+
+.input-container label {
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	color: #888;
+	/* Label color */
+	transform-origin: left bottom;
+	transform: scale(1);
+	transition: transform 0.3s ease, color 0.3s ease;
+	/* Smooth label animation */
+}
+
+.input-container input {
+	width: 100%;
+	padding: 10px;
+	border: none;
+	border-bottom: 2px solid #2196F3;
+	/* Primary color for the underline */
+	outline: none;
+	transition: border-bottom-color 0.3s ease;
+	/* Smooth transition for the underline color */
+}
+
+.input-container button {
+	flex: 1;
+	/* Make button occupy remaining space */
+	margin-left: 10px;
+	/* Add spacing between input and button */
+}
+
+/* Add hover effect for the button */
+.input-container:focus,
+.input-container:hover {
+	border-color: #1976D2;
+		box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}

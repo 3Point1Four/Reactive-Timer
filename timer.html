@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200.png" type="image/x-icon">
+	<title>Cube Timer</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Product+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="grid">
+		<div class="draggable" draggable="true"></div>
+		<div class="draggable" draggable="true"></div>
+		<div class="draggable" draggable="true"></div>
+		<div class="draggable" draggable="true"></div>
+		<div class="draggable" draggable="true"></div>
+		<div class="draggable" draggable="true"></div>
+		<div class="draggable" draggable="true"></div>
+		<div class="draggable" draggable="true" id="stopwatch">
+			<label id="stopwatch-child">
+				Hold Spacebar to Ready<br>
+				Release to Start
+			</label>
+		</div>
+		<div class="draggable" draggable="true"></div>
+		<div class="draggable" draggable="true"></div>
+		<div class="draggable" draggable="true"></div>
+		<div class="draggable" draggable="true"></div>
+		<div class="draggable" draggable="true"></div>
+		<div class="draggable" draggable="true"></div>
+		<div class="draggable" draggable="true">
+			<button class="button" id="showSettings">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+					stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+					class="feather feather-settings">
+					<circle cx="12" cy="12" r="3"></circle>
+					<path
+						d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+					</path>
+				</svg>
+			</button>
+		</div>
+	</div>
+
+	<div id="settingsPanel" class="hidden">
+		<div>
+			<div class="dropdown">
+				<label>SETTINGS</label>
+				<label for="timerFontSelect">Select Timer Font:</label>
+				<select id="timerFontSelect">
+					<option value="Arial">Arial</option>
+					<option value="Times New Roman">Times New Roman</option>
+					<option value="Verdana">Verdana</option>
+				</select>
+
+				<button class="button" id="applyTimerFont">Apply Timer Font</button>
+			</div>
+
+			<div class="dropdown">
+				<label for="uiFontSelect">Select UI Font:</label>
+				<select id="uiFontSelect">
+					<option value="Arial">Arial</option>
+					<option value="Times New Roman">Times New Roman</option>
+					<option value="Verdana">Verdana</option>
+				</select>
+				<button class="button" id="applyUIFont">Apply UI Font</button>
+			<div>
+				<label for="uiSizeInput">UI Size:</label>
+				<input class="input-container" type="text" id="uiSizeInput" placeholder="20px">
+				<button class="button apply-button" id="applyUiSize">Apply</button>
+			</div>
+			
+			<!-- Timer Size Setting -->
+			<div>
+				<label for="timerSizeInput">Timer Size:</label>
+				<input class="input-container" type="text" id="timerSizeInput" placeholder="20px">
+				<button class="button apply-button" id="applyTimerSize">Apply</button>
+			</div>
+			
+			<!-- Grid Space Setting -->
+			<div>
+				<label for="gridSpaceInput">Grid Space:</label>
+				<input class="input-container" type="text" id="gridSpaceInput" placeholder="20px">
+				<button class="button apply-button" id="applyGridSpace">Apply</button>
+			</div>
+	</div>
+	<script src="stopwatch.js"></script>
+	<script src="script.js"></script>
+	<script src="settings.js"></script>
+</body>
+
+</html>
