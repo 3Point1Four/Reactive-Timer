@@ -1,0 +1,9 @@
+:root {
+    --timer-font: 'Product Sans', sans-serif;
+    --ui-font: 'Product Sans', sans-serif;
+    --settings-font: 'Product Sans', sans-serif;
+    --grid-size: 10px;
+    --timer-size: 20px;
+    --ui-size: 20px;
+    --bg: url('../assets/default_bg.jpg');
+}

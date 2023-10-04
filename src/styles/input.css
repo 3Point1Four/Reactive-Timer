@@ -1,0 +1,41 @@
+/* Styling for input containers */
+.input-container {
+    border-radius: 6px;
+    border: #333 solid 1px;
+    position: relative;
+    width: 80%;
+    margin: 20px;
+    appearance: none;
+    background: transparent;
+    padding: 20px;
+    font-size: inherit;
+    cursor: pointer;
+    font-family: var(--ui-font);
+}
+
+/* Styling for input labels */
+.input-container label {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #ffffff;
+    transform-origin: left bottom;
+    transform: scale(1);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Styling for input fields */
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #2196F3;
+    outline: none;
+    transition: border-bottom-color 0.3s ease;
+}
+
+/* Styling for input buttons */
+.input-container button {
+    flex: 1;
+    margin-left: 10px;
+}

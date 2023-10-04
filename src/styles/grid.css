@@ -1,0 +1,38 @@
+/* Styling for the grid */
+.grid {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(5, auto);
+    gap: var(--grid-size);
+    height: 100%;
+    align-content: end;
+}
+
+/* Styling for draggable elements */
+.draggable {
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    border-radius: 24px;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+    position: relative;
+    font-size: var(--ui-size);
+    font-family: var(--timer-font);
+    background: rgba(0, 0, 0, 0.2);
+    min-height: 280px;
+    backdrop-filter: blur(16px);
+    z-index: 10;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for drag-over effect */
+.drag-over {
+    border: 2px dashed #3498db;
+    border-radius: 60px;
+    padding: 4px;
+}

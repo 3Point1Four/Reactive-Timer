@@ -1,0 +1,29 @@
+/* Styling for list module */
+#list-module {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling for the final times list */
+#finalTimes {
+    max-height: 200px;
+    overflow-y: auto;
+    font-size: 16px;
+    padding: 4px;
+    display: flex;
+    justify-content: left;
+}
+
+/* Styling for list items in the final times list */
+#finalTimesList li {
+    font-size: 16px;
+    margin: 8px;
+}
+
+/* Styling for the top section of the list module */
+#list-top {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+}

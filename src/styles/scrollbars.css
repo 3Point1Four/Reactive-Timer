@@ -1,0 +1,19 @@
+/* Styling for scrollbars */
+body {
+    scrollbar-width: thin;
+    scrollbar-color: #3498db #ffffff;
+}
+
+/* Styling for scrollbar track and thumb */
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #3498db;
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #2980b9;
+}
