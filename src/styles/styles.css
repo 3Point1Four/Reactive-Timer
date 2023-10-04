@@ -9,6 +9,12 @@
 	--grid-size: 10px;
 	--timer-size: 20px;
 	--ui-size: 20px;
+	--bg: url('../assets/default_bg.jpg');
+}
+
+img#icon {
+	height: 100px;
+	width: 100px;
 }
 
 body,
@@ -17,7 +23,7 @@ html {
 	margin: 0;
 	overflow: hidden;
 	font-size: 16px;
-	background: url('https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg?auto=compress&cs=tinysrgb&w=1600');
+	background: var(--bg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -117,7 +123,6 @@ display: inline-block;
 	border: 2px dashed #3498db;
 	border-radius: 60px;
 	padding: 4px;
-	cursor: grab;
 }
 
 .button {
