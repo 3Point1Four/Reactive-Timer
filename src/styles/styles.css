@@ -1,4 +1,3 @@
-/* Define CSS variables for fonts */
 :root {
 	--timer-font: 'Product Sans',
 		sans-serif;
@@ -84,11 +83,9 @@ display: inline-block;
 	box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
 }
 
-/* Add some margin or padding to create space between the button and select */
 .dropdown button {
 	margin: 10px;
 	flex: 1;
-	/* Adjust the margin as needed */
 }
 
 .grid {
@@ -216,19 +213,15 @@ display: inline-block;
 	overflow: auto;
 }
 
-/* Define the scrollbar styles */
-/* Track */
 ::-webkit-scrollbar {
 	width: 10px;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
 	background: #3498db;
 	border-radius: 5px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
 	background: #2980b9;
 }
@@ -263,24 +256,20 @@ display: inline-block;
 	background-color: #ffffff00
 }
 
-/* Apply scrollbar styles to the body */
 body {
 	scrollbar-width: thin;
 	scrollbar-color: #3498db #ffffff;
 }
 
-/* Track for Firefox */
 body::-webkit-scrollbar {
 	width: 10px;
 }
 
-/* Handle for Firefox */
 body::-webkit-scrollbar-thumb {
 	background: #3498db;
 	border-radius: 5px;
 }
 
-/* Handle on hover for Firefox */
 body::-webkit-scrollbar-thumb:hover {
 	background: #2980b9;
 }
@@ -304,11 +293,9 @@ body::-webkit-scrollbar-thumb:hover {
 	bottom: 10px;
 	left: 0;
 	color: #ffffff;
-	/* Label color */
 	transform-origin: left bottom;
 	transform: scale(1);
 	transition: transform 0.3s ease, color 0.3s ease;
-	/* Smooth label animation */
 }
 
 .input-container input {
@@ -316,22 +303,27 @@ body::-webkit-scrollbar-thumb:hover {
 	padding: 10px;
 	border: none;
 	border-bottom: 2px solid #2196F3;
-	/* Primary color for the underline */
 	outline: none;
 	transition: border-bottom-color 0.3s ease;
-	/* Smooth transition for the underline color */
 }
 
 .input-container button {
 	flex: 1;
-	/* Make button occupy remaining space */
 	margin-left: 10px;
-	/* Add spacing between input and button */
 }
 
-/* Add hover effect for the button */
 .input-container:focus,
 .input-container:hover {
 	border-color: #1976D2;
 		box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+#finalTimesList {
+	max-height: 200px;
+	overflow-y: auto;
+}
+
+#finalTimesList li {
+	font-size: 16px;
+	margin-bottom: 8px;
 }
